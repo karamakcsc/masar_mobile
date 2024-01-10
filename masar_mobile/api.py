@@ -62,7 +62,7 @@ def get_email(email = None):
         return f"This E-mail does not exist or deactivated. Plese Contact The Administrator"
     return result 
 
-##################### mahmoud code to reset password 
+###################### mahmoud code to reset password 
 @frappe.whitelist(allow_guest=True)
 def reset_password(email , pwd ):
     user = frappe.get_value('User' , {'email':email} ,['full_name'])
